@@ -13,4 +13,19 @@ body {
 h1 {
     font-family: "Montserrat", sans-serif;
     font-size: 3rem;
+    color: blue;
+}
+
+
+.main_button {
+    padding: 0.75rem 2rem;
+
+    border-radius: 100px;
+    background-color: lightgreen;
+}
+
+.card {
+    width: 15rem;
+    padding: 2rem;
+    border: 1px solid black;
 }
