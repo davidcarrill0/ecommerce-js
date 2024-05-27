@@ -1,41 +1,67 @@
-// simulador de carrito
+const cardContainer = document.getElementById(`productsContainer`);
+const cardContainerMan = document.getElementById(`productsManContainer`);
 
-// array de carrito para guardar items
-// const SHOPPING_CART = [];
-
-
-// Objeto producto
-class Producto {
-    constructor(nombre, precio, img) {
-        this.marca = nombre;
-        this.precio = precio;
-        this.img = img;
-    }
+// Mostrar productos Mujeres en HTML
+function cardProductsGirl(products) {
+    products.forEach(product => {
+        const newItem = document.createElement("div");
+        newItem.classList = "best-sell-card";
+        newItem.innerHTML = `
+            <div class="best-sell-img-container">
+                <img class="product-img" src="${product.img}" alt="">
+                <div class="card-divider"></div>
+            </div>
+            <div class="card-info-container">
+                <h4>${product.name}</h4>
+                <p>${product.description}</p>
+            </div>
+            <div class="card-quantity-container">
+            <h4>$${product.price}</h4>
+            <button class="button-add-cart"><b>Agregar</b> <img class="icon-cart" src="./assets/icons/icon-cart.png"></button>
+            </div>
+            
+        `
+        cardContainer.appendChild(newItem);
+        newItem.getElementsByTagName(`button`)[0].addEventListener(`click`, () => addToCart(product));
+    });
 }
+cardProductsGirl(PRODUCTS);
 
-const ZAPATOS = new Producto("Nike", 150, "nike.jpg");
-const CAMISETA = new Producto("Adidas", 50, "adidas.jpg");
-const PANTALON = new Producto("Zara", 120, "zara.jpg");
 
-const ArrayProductos = [ZAPATOS, CAMISETA, PANTALON];
+// Mostrar productos Hombres en HTML
+function cardProductsMan(products) {
+    products.forEach(product => {
+        const newItem = document.createElement("div");
+        newItem.classList = "best-sell-card";
+        newItem.innerHTML = `
+            <div class="best-sell-img-container">
+                <img class="product-img" src="${product.img}" alt="">
+                <div class="card-divider"></div>
+            </div>
+            <div class="card-info-container">
+                <h4>${product.name}</h4>
+                <p>${product.description}</p>
+            </div>
+            <div class="card-quantity-container">
+            <h4>$${product.price}</h4>
+            <button class="button-add-cart"><b>Agregar</b> <img class="icon-cart" src="./assets/icons/icon-cart.png"></button>
+            </div>
+            
+        `
+        cardContainerMan.appendChild(newItem);
+        newItem.getElementsByTagName(`button`)[0].addEventListener(`click`, () => addToCart(product));
+    });
+}
+cardProductsMan(PRODUCTS_MAN);
 
-// Obtener el contenedor
-const contenedor = document.getElementById("contenedor");
 
-// Mostrar los productos en el contenedor
-ArrayProductos.forEach(Producto => {
-    let div = document.createElement("div");
-    div.className = "card";
-    div.innerHTML = `
-        <p>nombre: ${Producto.marca}</p>
-        <p>precio: ${Producto.precio}</p>
-        <img src="${Producto.img}"/>
-        <button>Agregar</button>
-    `;
-    contenedor.appendChild(div);
+
+// Animacion Boton agregar
+document.querySelectorAll('.button-add-cart').forEach(button => {
+    button.addEventListener('click', function() {
+        button.style.transform = 'scale(0.95)';
+        setTimeout(() => {
+            button.style.transform = 'scale(1)';
+        }, 50);  
+    });
 });
-
-
-
-
-

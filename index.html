@@ -4,30 +4,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Preentrega 02</title>
     <!-- Link a CSS-->
     <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Link a JS -->
+    <script src="./app/products.js"></script>
+    <script src="./app/products-man.js"></script>
+    <script src="./app/index.js" defer></script>
+    <script src="./app/shopping-cart.js" defer></script>
+
+    <title>UniformEC</title>
 
     <!-- Link a fuente-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-
-
 </head>
 
 <body>
 
-<h1>Preentrega 02</h1>
-<button>Carrito</button>
+    <header class="navbar-container">
+        <nav class="container-large">
+            <a href="./index.html">
+                <h4>UNIFORM-EC</h4>
+            </a>
+            <ul>
+                <li>
+                    <a href="./index.html#productsManContainer">Hombres</a>
+                </li>
+                <li>
+                    <a href="./index.html#productsContainer">Mujeres</a>
+                </li>
+                <!--link a carrito-->
+                <a href="./pages/cart.html">
+                    <div class="button-cart">
+                        <p>Carrito</p>
+                        <div class="button-divider"></div>
+                        <div>
+                            <img class="icon-cart" src="./assets/icons/icon-cart.png" alt="icon cart">
+                        </div>
+                        <div class="quantity-products">
+                            <p id="quantity-cart">0</p>
+                        </div>
+                    </div>
+                </a>
+            </ul>
+        </nav>
+    </header>
 
-        <div id="contenedor">
 
+    <main>
+        <!-- Hero Section -->
+        <section class="container-large padding-section">
+            <div class="home-hero">
+                <div class="home-hero-info">
+                    <h1>Uniformes Profesionales de Calidad</h1>
+                    <p>
+                        Encuentra la mejor selección de uniformes médicos diseñados para tu comodidad y estilo
+                        profesional.
+                    </p>
+                    <a href="./index.html#gender">
+                        <button class="button">COMPRAR</button>
+                    </a>
+                </div>
+                <div class="home-hero-image-container">
+                    <img class="home-hero-image" src="./assets/header-image.png">
+                </div>
+            </div>
+        </section>
+
+        <!-- Logos Section -->
+        <section class="container-large padding-section" id="gender">
+            <div class="logo-banner-container">
+                <img class="logo-img" src="./assets/logos/T16_BSS_desk_asset.jpg" alt="">
+                <img class="logo-img" src="./assets/logos/T16_Dickies_desk_asset.jpg" alt="">
+                <img class="logo-img" src="./assets/logos/T16_Easy_stretch_desk_asset.jpg" alt="">
+                <img class="logo-img" src="./assets/logos/T16_Skechers_desk_asset.jpg" alt="">
+                <img class="logo-img" src="./assets/logos/T16_Toons_desk_asset.jpg" alt="">
+                <img class="logo-img" src="./assets/logos/T16_Wink_desk_asset.jpg" alt="">
+            </div>
+        </section>
+
+        <!-- Generos Section -->
+        <section class="container-large padding-section">
+            <div class="gender-section-container">
+                <div class="gender-male-container">
+                    <div class="gender-info-container">
+                        <h2>Hombres</h2>
+                        <a class="gender-link-container" href="./index.html#productsManContainer">
+                            <p>Ver Colección</p>
+                            <img class="gender-link-arrow" src="./assets/icons/right-arrow.png" alt="">
+                        </a>
+                    </div>
+                    <div class="gender-img-container">
+                        <img class="gender-img-male" src="./assets/gender/gender-male.png" alt="">
+                    </div>
+                </div>
+                <div class="gender-female-container">
+                    <div class="gender-info-container">
+                        <h2>Mujeres</h2>
+                        <a class="gender-link-container" href="./index.html#productsContainer">
+                            <p>Ver Colección</p>
+                            <img class="gender-link-arrow" src="./assets/icons/right-arrow.png" alt="">
+                        </a>
+                    </div>
+                    <div class="gender-img-container">
+                        <img class="gender-img-female" src="./assets/gender/gender-female.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Más Vendidos Sectio -->
+        <section id="productsContainer" class="container-large padding-section best-sell-section">
+
+        </section>
+
+        <section id="productsManContainer" class="container-large padding-section best-sell-section">
+
+        </section>
+
+    </main>
+
+
+    <footer class="background-color-main">
+        <div class="container-large footer-section">
+            <a href="">
+                <p><b>UNIFORM-EC</b></p>
+            </a>
+            <div>
+                <p class="copyright">
+                    Copyright © Uniform-EC - All Rights Reserved Powered by David Carrillo
+                </p>
+            </div>
         </div>
+    </footer>
 
-    <!-- Link a JS -->
-    <script src="./app/index.js"></script>
 </body>
 
 </html>

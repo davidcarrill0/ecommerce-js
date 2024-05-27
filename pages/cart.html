@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link a CSS-->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Link a JS -->
+    <script src="../app/cart.js" defer></script>
+    <script src="../app/shopping-cart.js" defer></script>
+
+    <title>UniformEC - Carrito</title>
+
+    <!-- Link a fuente-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="navbar-container">
+        <nav class="container-large">
+            <a href="../index.html">
+                <h4>UNIFORM-EC</h4>
+            </a>
+            <ul>
+                <li>
+                    <a href="../index.html#productsManContainer">Hombres</a>
+                </li>
+                <li>
+                    <a href="../index.html#productsContainer">Mujeres</a>
+                </li>
+                <!--link a carrito-->
+                <a href="./cart.html">
+                    <div class="button-cart">
+                        <p>Carrito</p>
+                        <div class="button-divider"></div>
+                        <div>
+                            <img class="icon-cart" src="../assets/icons/icon-cart.png" alt="icon cart">
+                        </div>
+                        <div class="quantity-products">
+                            <p id="quantity-cart">0</p>
+                        </div>
+                    </div>
+                </a>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+
+
+        <section class="container-large padding-section">
+            <div class="cart-hero">
+                <div class="cart-tittle-container">
+                    <h3>Tu Carrito</h3>
+                    <div class="cart-tittle-buttons">
+                        <a class="button-secondary" href="../index.html#gender">Continuar comprando</a>
+                        <!-- boton JS -->
+                        <button id="clearCartButon" class="button">Vaciar Carrito</button>
+                    </div>
+                </div>
+                <div class="cart-description-container">
+                    <p>Producto</p>
+                    <p class="align-center">Cantidad</p>
+                    <p class="">Precio Unidad</p>
+                </div>
+                <div class="card-divider"></div>
+                <!-- JS Container -->
+
+
+                <div id="productsContainer" class="cart-items-container">
+
+
+                </div>
+                <div class="card-divider"></div>
+
+                <div id="cartTotal" class="cart-total-component">
+                    <div class="cart-total-container">
+                        <div class="cart-total-info">
+                            <h6>Total</h6>
+                            <p>$ <span id="cart-total-number">0</span></p>
+                        </div>
+                        <button class="button" disabled>Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+    </main>
+
+
+    <footer class="background-color-main">
+        <div class="container-large footer-section">
+            <a href="">
+                <p><b>UNIFORM-EC</b></p>
+            </a>
+            <div>
+                <p class="copyright">
+                    Copyright © Uniform-EC - All Rights Reserved Powered by David Carrillo
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

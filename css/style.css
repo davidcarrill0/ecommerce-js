@@ -3,29 +3,486 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    /*quitar subrayado a links*/
 }
+
+/* para ver cajas temporal */
+/* * {
+    border: 1px solid rgb(0, 255, 81);
+} */
 
 body {
     font-family: "Montserrat", sans-serif;
 }
 
+.background-color-main {
+    background-color: #d6e9e8;
+}
+
+
+.container-large {
+    margin: auto;
+    max-width: 110rem;
+    padding: 0rem 3rem;
+}
+
+.padding-section {
+    /*padding general para secciones*/
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+}
+
+.padding-section-cart {
+    /*padding general para secciones*/
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+}
+
+.align-center {
+    justify-self: center;
+}
+
+
+/* ------ FONTS -------- */
 
 h1 {
     font-family: "Montserrat", sans-serif;
-    font-size: 3rem;
-    color: blue;
+    font-size: 5rem;
+    line-height: 1;
+}
+
+h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 4rem;
+    line-height: 1;
+}
+
+h3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    line-height: 1;
+}
+
+h4 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+h5 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.25rem;
+    line-height: 1;
+}
+
+h6 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    line-height: 1;
 }
 
 
-.main_button {
-    padding: 0.75rem 2rem;
+/* ------ BUTONS -------- */
 
+.button {
+    background-color: black;
+    color: white;
+    border: 0px;
     border-radius: 100px;
-    background-color: lightgreen;
+    padding: 1.25rem 3rem;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
 }
 
-.card {
-    width: 15rem;
-    padding: 2rem;
+.button:hover {
+    background-color: #284043; 
+}
+
+.button-secondary {
     border: 1px solid black;
+    border-radius: 100px;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.button-secondary:hover {
+    background-color: #28404325; 
+}
+
+
+/* ------ NAVBAR -------- */
+
+.navbar-container {
+    position: fixed;
+    left: 0%;
+    right: 0%;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(19px);
+    z-index: 10;
+    height: 80px;
+    padding-top: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    column-gap: 3rem;
+}
+
+a {
+    color: black;
+}
+
+.button-cart {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    gap: 0.75rem;
+    background-color: black;
+    border-radius: 100px;
+    color: white;
+    padding: 0.6rem 1rem;
+}
+
+.button-cart:hover {
+    background-color: #284043; 
+}
+
+
+.button-divider {
+    height: 90%;
+    width: 1px;
+    background-color: rgb(149, 149, 149);
+}
+
+.icon-cart {
+    height: 20px;
+}
+
+.quantity-products {
+    width: 10px;
+    color: white;
+    margin-right: 0.5rem;
+}
+
+
+
+/* ------ HERO SECTION -------- */
+
+.home-hero {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: #d6e9e8;
+    border-radius: 20px;
+    padding-left: 6rem;
+    min-height: 40rem;
+    margin-top: 6rem;
+}
+
+.home-hero-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.home-hero-image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 100%;
+}
+
+.home-hero-image {
+    position: absolute;
+    height: 720px;
+}
+
+
+/* ------ LOGO SECTION -------- */
+
+.logo-banner-container {
+    display: flex;
+    justify-content: space-between;
+    height: 120px;
+}
+
+.logo-img {
+    border-radius: 20px;
+}
+
+/* ------ GENDER SECTION -------- */
+
+.gender-section-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    min-height: 22rem;
+}
+
+.gender-male-container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: #e6ebfd;
+    border-radius: 20px;
+    padding-left: 3rem;
+
+}
+
+.gender-female-container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: #feeaf8;
+    border-radius: 20px;
+    padding-left: 3rem;
+
+}
+
+.gender-info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.gender-link-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.gender-link-arrow {
+    height: 20px;
+}
+
+.gender-img-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 100%;
+}
+
+.gender-img-male {
+    position: absolute;
+    width: 300px;
+}
+
+.gender-img-female {
+    position: absolute;
+    width: 280px;
+}
+
+/* ------ BEST SELL SECTION -------- */
+
+.best-sell-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 5rem;
+}
+
+.best-sell-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: rgb(240, 240, 240);
+    border-radius: 20px;
+    padding: 2rem;
+}
+
+.best-sell-img-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product-img {
+    height: 380px;
+    object-fit: contain;
+}
+
+.card-divider {
+    width: 100%;
+    height: 1px;
+    background-color: rgb(197, 195, 195);
+}
+
+.card-info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.card-quantity-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.button-add-cart {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    gap: 0.75rem;
+    background-color: black;
+    border-radius: 100px;
+    color: white;
+    padding: 0.6rem 4rem;
+    border: 0;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.2s ease;
+}
+
+.button-add-cart:hover {
+    background-color: #284043; 
+}
+
+
+/* ------ CART HERO SECTION -------- */
+
+.cart-hero {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #d6e9e8;
+    border-radius: 20px;
+    padding: 4rem;
+    min-height: 20rem;
+    margin-top: 4rem;
+}
+
+.cart-tittle-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.cart-tittle-buttons {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.cart-description-container {
+    display: grid;
+    grid-template-columns: 3fr 200px 150px;
+    gap: 4rem;
+    color: rgb(181, 180, 180);
+    font-size: 0.8rem;
+}
+
+.cart-notification{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.cart-items-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+}
+
+.cart-items-component {
+    display: grid;
+    grid-template-columns: 3fr 200px 150px;
+    align-items: center;
+    gap: 4rem;
+}
+
+.cart-img-container {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cart-img {
+    max-width: 60px;
+}
+
+.card-quantity-component {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    border: 1px solid rgb(194, 194, 194);
+    border-radius: 100px;
+    padding: 1rem 0.5rem;
+    height: 50px;
+    width: 200px;
+}
+
+.card-quantity-icon {
+    background-color: transparent;
+    border: 0px;
+    display: flex;
+    justify-content: center;
+    color: rgb(194, 194, 194);
+    font-weight: bold;
+    font-size: 2rem;
+    width: 60px;
+    cursor: pointer;
+}
+
+.cart-total-component {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.cart-total-container {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+
+.cart-total-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 1.75rem;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.hide{
+    display: none;
+}
+
+/* ------ FOOTER SECTION -------- */
+
+
+
+.footer-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    margin-top: 3rem;
+}
+
+.copyright {
+    font-size: 0.75rem;
 }
